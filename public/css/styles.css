@@ -470,6 +470,26 @@ main section article svg {
     background-color: #ffff;
   }
 
+  main section article .item .item-description {
+  display: none;
+  
+  }
+
+  main section article:hover {
+    box-shadow: 5px 5px 5px 5px rgb(92, 92, 92);
+  }
+
+  main section article:hover .item-description{
+   
+    display:block;
+    transition: 0.5s;}
+  
+
+  main section article svg:hover {
+    transform: rotate(-90deg);
+    transition: 0.5s;
+  }
+
   footer {
     display: flex;
     flex-wrap: wrap;
@@ -484,6 +504,11 @@ main section article svg {
   footer .footer-copyright {
     width: 100%;
     text-align: center;
+  }
+
+  footer section:hover div i {
+    color:rgb(28, 209, 28);
+    transition: 0,5s;
   }
 }
 
