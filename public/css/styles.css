@@ -10,6 +10,10 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  width: 100%;
+  min-width: 350px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 h2 {
@@ -19,45 +23,61 @@ h2 {
 header {
   background-color: #eac926;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 header .header-first {
   display: flex;
-  width: 100vw;
+  width: 100%;
   flex-wrap: wrap;
+  justify-content: space-between;
+
 }
+
 header img {
+  display: block;
   width: 40%;
-  margin-top: 15px;
+  padding: 16px;
 }
 
 header .header-search-bar {
-  width: 50%;
-  background-color: white;
-  align-self: center;
-  margin-left: 4%;
-  border-radius: 4px;
   display: flex;
-  margin-top: 10px;
+  margin: auto 4%;
+  width: 52%;
+  background-color: white;
+  border-radius: 6px; 
 }
 
 header div input {
+  display: block;
   border: 0px;
-  width: 100%;
+  width: 90%;
   border-radius: 4px;
+  outline: none;
+  padding: 4px;
+  margin: auto;
+}
+header div input::placeholder {
+  color: rgb(182, 182, 182);
 }
 
-header .header-search-bar i {
-  align-self: center;
+header .header-search-bar .header-search-bar-button {
+  display: block;
+  width: 10%;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  color: gray;
+}
+header .header-search-bar .header-search-bar-button:hover {
+  color: rgb(0, 0, 0);
 }
 
-header .header-compra-cuotas {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.header-compra-cuotas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  text-align: center;
 }
 
 header nav ul li {
@@ -77,17 +97,16 @@ header .burger-menu i {
 
 header .burger-menu {
   background-color: #1259c3;
-  height: 20px;
-  width: 20px;
+  height: 28px;
+  width: 28px;
   border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  margin-bottom: 5px;
+  margin:4px auto;
   padding: 3px;
-
   border-radius: 4px;
+  justify-self: center;
 }
 
 a {
@@ -101,6 +120,11 @@ li {
 
 img {
   width: 100%;
+}
+
+.main-banner {
+  height: 255px;
+object-fit: cover;
 }
 
 main {
@@ -144,16 +168,16 @@ main {
 }
 
 main section {
-  width: 100vw;
+  width: 100%;
 }
 
 main section h2 {
-  width: 90vw;
+  width: 90%;
   margin: 15px auto 10px;
 }
 
 main section article {
-  width: 90vw;
+  width: 90%;
   box-shadow: 4px 4px 5px 4px rgb(145, 145, 145);
   display: flex;
   flex-direction: column;
@@ -217,70 +241,26 @@ main section article svg {
   align-self: self-end;
 }
 
-/* main section article i {
-  display: block ;
-  font-size: 16 px ;
-  padding: 5 px ;
-  width: 30 px ;
-  height: 30 px ;
-  border: 1 px solid #39b54a ;
-  background-color: #FFF ;
-  border-radius: 50 % ;
-  position: absolute ;
-  right: 20 px ;
-  top: -15 px ;
-  } */
+
 
 @media (min-width: 480px) {
-  header {
-    background-color: #eac926;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  header .header-first {
-    display: flex;
-    width: 100vw;
-  }
+ 
   header img {
-    width: 30%;
-    margin-top: 15px;
+    width: 32%;
   }
 
   header .header-search-bar {
-    width: 30%;
-    background-color: white;
-    align-self: center;
-    /* margin-left: 4%; */
-    border-radius: 4px;
-    display: flex;
-    margin-top: 15px;
+    width: 60%;
   }
-
-  header div input {
-    border: 0px;
-    width: 100%;
-    border-radius: 4px;
-  }
-
-  header .header-search-bar i {
-    align-self: center;
-  }
-
-  header .header-compra-cuotas {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 35%;
-    text-align: center;
-    margin-top: 15px;
-  }
+ header nav {
+   margin-left: 8px;
+   margin-right: 8px;
+ }
 
   header nav ul li {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-    justify-content: space-between;
+    display: flex; 
+    margin: 8px;
+   
   }
 
   h2 {
@@ -329,14 +309,14 @@ main section article svg {
   }
 
   main section {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   main section h2 {
-    width: 90vw;
+    width: 90%;
     margin: 15px auto 10px;
   }
 
@@ -352,48 +332,21 @@ main section article svg {
 }
 
 @media (min-width: 780px) {
-  header {
-    background-color: #eac926;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
 
-  header .header-first {
-    display: flex;
-    width: 100vw;
-  }
+ 
   header img {
-    width: 30%;
-    margin-top: 15px;
+    width: 20%;
   }
 
   header .header-search-bar {
-    width: 30%;
-    background-color: white;
-    align-self: center;
-    /* margin-left: 4%; */
-    border-radius: 4px;
-    display: flex;
-    margin-top: 15px;
+    width: 50%;
+
   }
 
-  header div input {
-    border: 0px;
-    width: 100%;
-    border-radius: 4px;
-  }
-
-  header .header-search-bar i {
-    align-self: center;
-  }
 
   header .header-compra-cuotas {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 35%;
-    text-align: center;
-    margin-top: 15px;
+    width: 22%;
+   
   }
 
   header nav ul li {
@@ -447,16 +400,19 @@ main section article svg {
     align-items: center;
     background-color: rgb(219, 219, 219);
   }
-
+  .main-banner {
+    height: 360px;
+ 
+  }
   main section {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   main section h2 {
-    width: 90vw;
+    width: 90%;
     margin: 15px auto 10px;
   }
 
@@ -494,7 +450,7 @@ main section article svg {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
   }
 
   footer section {
@@ -532,7 +488,7 @@ main form {
   border-radius: 4px;
 }
 
-main form div input, button{
+main form div input, .button{
   display: block;
   margin: auto;
   margin-top: 15px;
@@ -540,8 +496,8 @@ main form div input, button{
   border: 1px solid rgb(145, 145, 145);
 }
 
-main form div input, button {
-  width: 50vw;
+main form div input, .button {
+  width: 50%;
   background-color:#ffff ;
   height: 24px;
   border-radius: 4px;

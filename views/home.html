@@ -9,21 +9,29 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <header>
       <div class="header-first">
         <img src="./images/logo-mercado-liebre.svg" alt="Mercado Liebre" />
-        <div class="header-search-bar">
-          <input type="text" />
-          <i class="fas fa-search"></i>
-        </div>
+        <form action="/" class="header-search-bar">
+          <button class="header-search-bar-button" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+          <input type="text" placeholder="Buscar en Mercado Liebre" />
+        </form>
         <p class="header-compra-cuotas">
-          <i class="fas fa-money-check-alt"></i>Compra en cuotas y sn tarjeta de
-          credito
+          <span class="material-icons-round"> credit_card </span>
+          Compra en cuotas y sin tarjeta de credito
         </p>
+        <div class="burger-menu">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
       <nav>
         <ul>
@@ -34,29 +42,26 @@
         </ul>
         <ul>
           <li>
-            <a href="/register">Crea tu cuenta<i class="fas fa-user"></i></a>
+            <a href="/register">Crea tu cuenta <i class="fas fa-user"></i></a>
           </li>
           <li>
-            <a href="/login">Ingresar<i class="fas fa-sign-in-alt"></i></a>
+            <a href="/login">Ingresar <i class="fas fa-sign-in-alt"></i></a>
           </li>
           <li>
-            <a href="#">Mis Compras<i class="fas fa-shopping-cart"></i></a>
+            <a href="#">Carrito <i class="fas fa-shopping-cart"></i></a>
           </li>
         </ul>
-        <div class="burger-menu">
-          <i class="fas fa-bars"></i>
-        </div>
       </nav>
     </header>
 
     <main>
-      <section>
+      <div class="img">
         <img
           class="main-banner"
           src="./images/banner-mercado-liebre.webp"
           alt=""
         />
-      </section>
+      </div>
       <section>
         <h2>BASADO EN TU ULTIMA VISITA</h2>
         <article>
